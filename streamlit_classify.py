@@ -28,9 +28,10 @@ else:
     size = (150,150);
     image = ImageOps.fit(image, size, Image.ANTIALIAS)
     image = np.asarray(image)
+    img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     #image = np.asarray(image)
     
-    img_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY);
+    img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY);
     glcmMatrix=(greycomatrix(img_gray, [1], [0], levels=256))
     proList = ['contrast', 'dissimilarity', 'homogeneity', 'ASM', 'energy'];
     for j in range(0, len(proList)):
