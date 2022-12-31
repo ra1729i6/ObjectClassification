@@ -10,7 +10,9 @@ import numpy as np
 from skimage.feature import greycomatrix,greycoprops
 import pickle
 import pandas as pd
-import sklearn
+from sklearn.metrics import accuracy_score
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import AdaBoostClassifier
 # st.write("""
 #          # Rock-Paper-Scissor Hand Sign Prediction
 #          """
