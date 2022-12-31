@@ -22,8 +22,8 @@ file = st.file_uploader("Please upload an image file", type=["jpg", "png"])
 if file is None:
     st.text("Please upload an image file")
 else:
-    #image = Image.open(file)
-    img_rgb = cv2.imread(file);
+    image = Image.open(file)
+    img_rgb = cv2.imread(image);
     st.image(img_rgb, use_column_width=True)
     #image = np.asarray(image)
     img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY);
