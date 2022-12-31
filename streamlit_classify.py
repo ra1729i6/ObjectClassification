@@ -42,10 +42,11 @@ else:
     for j in range(0, len(proList)):
         properties[j]=(greycoprops(glcmMatrix, prop=proList[j]))
     features = np.array([properties[0],properties[1],properties[2],properties[3],properties[4]]);
+    df = pd.DataFrame(final,columns=proList)
     filename = 'gclm_model.sav'; 
     neigh1 = pickle.load(open(filename, 'rb'));
-    features = features.reshape(-1, 1)
-    testt1=neigh1.predict(features);
+    #features = features.reshape(-1, 1)
+    testt1=neigh1.predict(df.values);
     if testt1==1:
        st.write("crease") ;
     elif testt1== 2:
