@@ -24,6 +24,7 @@ if file is None:
 else:
     image = Image.open(file)
     st.image(image, use_column_width=True)
+    image = np.asarray(image)
     img_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY);
     glcmMatrix=(greycomatrix(img_gray, [1], [0], levels=256))
     proList = ['contrast', 'dissimilarity', 'homogeneity', 'ASM', 'energy'];
