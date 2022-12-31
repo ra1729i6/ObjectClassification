@@ -68,7 +68,7 @@ else:
     else:
         st.write("welding_line");
     st.text("\n Probability ")
-    st.write(neigh1.predict_proba(properties)
+    st.write(neigh1.predict_proba(properties))
 #img_rgb  = cv2.imread(st.file_uploader(label='upload image here!'));
 # st.image(img_rgb, use_column_width=True)
 
