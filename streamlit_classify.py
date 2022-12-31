@@ -26,7 +26,7 @@ else:
     #img_rgb = cv2.imread(image);
     st.image(image, use_column_width=True)
     size = (150,150);
-    image = ImageOps.fit(image_data, size, Image.ANTIALIAS)
+    image = ImageOps.fit(image, size, Image.ANTIALIAS)
     image = np.asarray(image)
     #image = np.asarray(image)
     
