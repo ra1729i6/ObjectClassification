@@ -10,6 +10,7 @@ import numpy as np
 from skimage.feature import greycomatrix,greycoprops
 import pickle
 import pandas as pd
+import sklearn
 # st.write("""
 #          # Rock-Paper-Scissor Hand Sign Prediction
 #          """
