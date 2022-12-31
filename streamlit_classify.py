@@ -2,7 +2,7 @@ import os
 import streamlit as st
 import logging
 import requests
-from PIL import Image
+from PIL import Image ,ImageOps
 from io import BytesIO
 import numpy as np
 import cv2
