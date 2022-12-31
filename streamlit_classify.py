@@ -34,7 +34,8 @@ else:
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY);
     glcmMatrix=(greycomatrix(img_gray, [1], [0], levels=256))
     proList = ['contrast', 'dissimilarity', 'homogeneity', 'ASM', 'energy'];
-    properties = [];
+    properties =np.zeros(5)
+    glcmMatrix = [];
     for j in range(0, len(proList)):
         properties[j]=(greycoprops(glcmMatrix, prop=proList[j]))
     features = np.array([properties[0],properties[1],properties[2],properties[3],properties[4]]);
