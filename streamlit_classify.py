@@ -40,7 +40,7 @@ else:
     properties =np.zeros((5,1))
     
     for j in range(0, len(proList)):
-        properties[j,1]=(greycoprops(glcmMatrix, prop=proList[j]))
+        properties[j,0]=(greycoprops(glcmMatrix, prop=proList[j]))
     #features = np.array([properties[0],properties[1],properties[2],properties[3],properties[4]]);
     #df = pd.DataFrame(features,columns=proList)
     filename = 'gclm_model.sav'; 
