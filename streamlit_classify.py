@@ -22,10 +22,11 @@ file = st.file_uploader("Please upload an image file", type=["jpg", "png"])
 if file is None:
     st.text("Please upload an image file")
 else:
-    image = Image.open(file)
-    st.image(image, use_column_width=True)
-    image = np.asarray(image)
-    img_gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY);
+    #image = Image.open(file)
+    img_rgb = cv2.imread(file);
+    st.image(img_rgb, use_column_width=True)
+    #image = np.asarray(image)
+    img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY);
     glcmMatrix=(greycomatrix(img_gray, [1], [0], levels=256))
     proList = ['contrast', 'dissimilarity', 'homogeneity', 'ASM', 'energy'];
     for j in range(0, len(proList)):
