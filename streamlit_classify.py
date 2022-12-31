@@ -44,6 +44,7 @@ else:
     features = np.array([properties[0],properties[1],properties[2],properties[3],properties[4]]);
     filename = 'gclm_model.sav'; 
     neigh1 = pickle.load(open(filename, 'rb'));
+    features = features.reshape(-1, 1)
     testt1=neigh1.predict(features);
     if testt1==1:
        st.write("crease") ;
